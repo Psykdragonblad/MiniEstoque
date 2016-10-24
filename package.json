@@ -1,0 +1,24 @@
+{
+  "name": "miniestoque",
+  "version": "1.0.0",
+  "description": "Programa utilizado para gestão de produtos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psykdragonblad/MiniEstoque.git"
+  },
+  "author": "Marcos Souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Psykdragonblad/MiniEstoque/issues"
+  },
+  "homepage": "https://github.com/Psykdragonblad/MiniEstoque#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.5"
+  }
+}
