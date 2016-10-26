@@ -5,11 +5,23 @@ var produtoController = require('./api/controllers/produtoController');
 var loginController = require('./api/controllers/loginController');
 var bodyparser = require('body-parser');
 var path = require('path'); 
+//var produto = require('./api/models/produto');
 
+//app.use(express.static(path.join(__dirname, '/models')));
 mongoose.connect('mongodb://localhost:27017/estoque');
+
+//  produto.find({},function(err, val){
+//        if(err){
+//            res.send('Err:' + err);
+//            console.log('dd'+err);
+//        }
+    
+// console.log(val);
+//    });
 
 app.use(bodyparser.json());
 app.use('/login', loginController);
+app.use('/produto', produtoController);
 
 app.get('*', function(req, res){
     res.sendfile(index.html);

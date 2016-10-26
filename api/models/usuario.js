@@ -6,4 +6,4 @@ var EstoqueSchema = new mongoose.Schema({
     senha: String
 },{collection:'usuario'});
 
-module.exporte = mongoose.model('usuario', EstoqueSchema);
+module.exports = mongoose.model('usuario', EstoqueSchema);
