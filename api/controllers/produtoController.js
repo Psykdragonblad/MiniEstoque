@@ -4,26 +4,26 @@ var router = express.Router();
 
 var produto = require('../models/produto');
 
-// router.get('/',function (req,res){
-//     res.setHeader('Content-Type', 'application/json');
-//     // produto.find({},{ id:0, __v:0},function(err,val){
-//     //     if(err)
-//     //     {
-//     //         res.send('Erro:'+err);
-//     //         console.log('erro');
-//     //     }
-//     //     else
-//     //     {      
-//     //         res.send(val);    
-//     //         console.log('funcionou');
-//     //     }
-//     //     console.log(val);
-//     // });
-//     // console.log('entrou no create');
-//    // res.send('teste');
-//    findProduto(req,res);
+router.get('/',function (req,res){
+    res.setHeader('Content-Type', 'application/json');
+    // produto.find({},{ id:0, __v:0},function(err,val){
+    //     if(err)
+    //     {
+    //         res.send('Erro:'+err);
+    //         console.log('erro');
+    //     }
+    //     else
+    //     {      
+    //         res.send(val);    
+    //         console.log('funcionou');
+    //     }
+    //     console.log(val);
+    // });
+    // console.log('entrou no create');
+   // res.send('teste');
+   findProduto(req,res);
 
-// });
+});
 
 function findProduto(req, res){
 
@@ -59,8 +59,7 @@ router.post('/criar', function(req, res){
      console.log('inseriu');
 });
 
-router.post('/update', function(req, res){
-    console.log('2222');
+router.post('/update', function(req, res){    
     produto.findOneAndUpdate({nome :'Cortador2'},{nome :'cortador3'}, function(err, val){
      
         if(err)
