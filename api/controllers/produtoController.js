@@ -19,8 +19,7 @@ router.get('/',function (req,res){
     //     }
     //     console.log(val);
     // });
-    // console.log('entrou no create');
-   // res.send('teste');
+
    findProduto(req,res);
 
 });
