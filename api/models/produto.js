@@ -13,6 +13,18 @@ var EstoqueSchema = new mongoose.Schema({
 //    // this.increment();
 //    //next.increment();
 //      next(); })
+//var produto = mongoose.model('produto', EstoqueSchema);
+//var p_produto = new produto({});
+
+//produto.pre('save', function)
+// p_produto.save(function (error, data) {
+//     if (error) {
+//       console.log(error);
+//     } else {
+//       console.dir(data);
+//     }
+// });
+//p_produto.save();
 
 module.exports = mongoose.model('produto', EstoqueSchema);
 

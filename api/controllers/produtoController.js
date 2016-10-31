@@ -2,7 +2,8 @@ var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
 
-var produto = require('../models/produto');
+var produto = new require('../models/produto');
+//var produto = new requi
 
 router.get('/',function (req,res){
     res.setHeader('Content-Type', 'application/json');
@@ -57,9 +58,15 @@ router.post('/criar', function(req, res){
     })
      console.log('inseriu');
 });
-
+//var schema = new mongoose.Schema({ name: 'produto' });
+//var Thing = mongoose.model('produto', produto);
+//var thing = new Thing({ name: 'mongoose v3' });
+//thing.save(); // { __v: 0, name: 'mongoose v3' }
+//var p_produto = mongoose.model('produto',produto);
 router.post('/update', function(req, res){    
-    produto.findOneAndUpdate({nome :'Cortador2'},{nome :'cortador3'}, function(err, val){
+    produto.findOneAndUpdate({nome :'35'},{nome :'36'}, 
+    //{ $inc: {  __v: 1 }}, 
+    function(err, val){
      
         if(err)
         {
@@ -68,12 +75,17 @@ router.post('/update', function(req, res){
         }
         else
         {           
+          //  p_produto.save();
             console.log('funcionou');
+           // var p_produto = new 
+            //  produto.save(function(er){
+            //     console.log(er);
+            // })
         }
-        console.log(val);
+        //console.log(val);
        
     });
-    produto.save();
+    //produto.save();
      console.log('alterou');
      
 });

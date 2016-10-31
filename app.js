@@ -3,6 +3,7 @@ var app = express();
 var mongoose = require('mongoose');
 var produtoController = require('./api/controllers/produtoController');
 var loginController = require('./api/controllers/loginController');
+var localController = require('./api/controllers/localController');
 var bodyparser = require('body-parser');
 var path = require('path'); 
 //var produto = require('./api/models/produto');
@@ -22,6 +23,7 @@ mongoose.connect('mongodb://localhost:27017/estoque');
 app.use(bodyparser.json());
 app.use('/login', loginController);
 app.use('/produto', produtoController);
+app.use('/local', localController);
 
 app.get('*', function(req, res){
     res.sendfile(index.html);
