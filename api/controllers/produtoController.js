@@ -58,11 +58,7 @@ router.post('/criar', function(req, res){
     })
      console.log('inseriu');
 });
-//var schema = new mongoose.Schema({ name: 'produto' });
-//var Thing = mongoose.model('produto', produto);
-//var thing = new Thing({ name: 'mongoose v3' });
-//thing.save(); // { __v: 0, name: 'mongoose v3' }
-//var p_produto = mongoose.model('produto',produto);
+
 router.post('/update', function(req, res){    
     produto.findOneAndUpdate({nome :'35'},{nome :'36'}, 
     //{ $inc: {  __v: 1 }}, 
