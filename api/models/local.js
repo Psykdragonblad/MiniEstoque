@@ -5,7 +5,8 @@ var EstoqueSchema = new mongoose.Schema({
     rua: String,
     pratileira: String,
     andar: String,
-    descricao: String
+    descricao: String,
+     __v: { type: Number, select: false}
 
 },{collection:'local'});
 
